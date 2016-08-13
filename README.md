@@ -1,9 +1,9 @@
 # Outreach Tool
-This is the release folder for an FRC to create their own Data Collection Website. Created originally for Skunk Works Robotics 1983 by Kaeden Wile (2016).
+This is the release for a tool that allows teams to create their own Data Collection Website. Created originally for Skunk Works Robotics 1983 by Kaeden Wile (2016).
 
 # Instructions
 ### Login/Create an Account on Amazon Web Services
-Their free teir will be enough to cover all of your costs for the first year.
+Their free tier will be enough to cover all of your costs for the first year.
 
 ### Create Website
 1. Create a new Bucket in Amazon S3 called "<yourTeamNumber>Outreach" or something similar.
@@ -39,8 +39,8 @@ Their free teir will be enough to cover all of your costs for the first year.
 ##### Create the Lambda Function
 1. Open __AWS Lambda__ and select *Create a Lambda Function*.
 2. In filter, search for "microservice-http-endpoint-py" and select the one result. Make sure that the runtime is python 2.7.
-3. Set __Resource Method__ to the resource you created (title "questions"), change __Method__ from *GET* to *POST*, and continue. 
-4. Add an appropriate description and remember whichever name you choose. 
+3. Set __Resource Method__ to the resource you created (title "questions"), change __Method__ from *GET* to *POST*, and continue.
+4. Add an appropriate description and remember whichever name you choose.
 5. To add Lambda Function Code, change __Code Entry Type__ to *Upload a .ZIP File*, then choose the zip file you made earlier.
 6. Give a name to the security role, and create the function.
 
@@ -49,7 +49,7 @@ Their free teir will be enough to cover all of your costs for the first year.
 2. Save and accept the added permission.
 3. Select your resource "questions" then, under __Actions__, choose *Enable CORS*. Don't change any of the options.
 4. Select *Deploy API* from __Actions__, and make sure you deploy to "prod".
-5. Go into the __Stages__ Menu and select *Prod*. Under the tab __SDK Generation__, set the __Platform__ to *Javascript* and then generate an SDK. 
+5. Go into the __Stages__ Menu and select *Prod*. Under the tab __SDK Generation__, set the __Platform__ to *Javascript* and then generate an SDK.
 6. Directly copy the "apigClient.js" file and "lib" folder into your Amazon S3 Bucket. *(This step is why it is important that your resource was named "questions"). If anything doesn't work, check the final.html file and troubleshoot.*
 
 At this point, you should be able to access your website via the link when you first created your bucket. After generating questions, your system will be up and running!
