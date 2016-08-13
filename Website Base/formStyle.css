@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+HTML {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #58585B url("background.png") no-repeat scroll center center;
+    background-size: auto 80%;
+
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 5px #000000;
+    color: #BE1E2D;
+    font-family: "Lobster", sans-serif;
+}
+
+h3 {
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.outreachTypeButton {
+    background: #BE1E2D;
+
+    display: block;
+    text-align: center;
+    padding: 10px;
+
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.outreachTypeButton:hover {
+    background: #9E000D;
+}
+
+.submitButtonWrapper {
+    text-align: center;
+}
+
+.submitButton {
+    box-shadow: 2px 2px 5px #000000;
+    border: none;
+    background: #BE1E2D;
+    padding: 10px;
+    margin-top: 10px;
+
+    font-size: 20px;
+    color: #dddddd;
+}
+
+.submitButton:hover {
+    box-shadow: 1px 1px 5px #000000;
+    background: #9E000D;
+}
+
+label, input {
+    font-size: 20px;
+    border: none;
+    width: 100%;
+}
+
+input, textarea {
+    color: #000000;
+    border: solid white 1px;
+}
+
+.currencyInput {
+    width:90%;
+}
+
+.labelWrapper {
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+}
+
+table {
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 500px;
+}
+
+td {
+    text-align: left;
+    vertical-align: top;
+}
+
+tr.outreachTypeButtonRow {
+    padding: 12px;
+}
+
+td.outreachTypeButtonCol {
+    padding: 12px;
+    width: 50%;
+}
+
+.radioInputWrapper {
+    text-align: left;
+    font-size: 20px;
+}
+
+input.radioButton {
+    display: inline;
+    width: 5%;
+}
+
+select {
+    border-radius: 0;
+    background: white;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+textarea {
+    font-size: 14px;
+    border: none;
+    resize: none;
+    width: 100%;
+}
+
+.link {
+    color: #DDDDDD;
+    font-weight: bold;
+}
+
+.startOver {
+    margin: 20% 40% 20% 40%;
+
+    background: #BE1E2D;
+
+    display: block;
+    text-align: center;
+    padding: 10px;
+
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.startOver:hover {
+    background: #9E000D;
+}
+
+.errorMessage {
+    color: #BE1E2D;
+}
+
+.notesTextArea {
+    /*border: solid #000000 1px;*/
+    border-radius: 5px;
+    width: 250px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API TEST</title>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <script type="text/javascript">
+        function callerino() {
+            var apigClient = apigClientFactory.newClient();
+            var params = {};
+            var body = {
+                "data" : {
+                    "owner": document.getElementById("name").value,
+                    "numSkunks": "13",
+                    "numMentors": "12",
+                    "hours": "3",
+                    "date": "2016-03-03",
+                    "type": "BOpre",
+                    "notes": "Hello, World!"
+                },
+                "type": "BOpre",
+                "deeper": {
+                    "type":"presentation",
+                    "orgName":"Chef Software",
+                    "contact":"Paul Edelhertz",
+                    "support":"They gave us 12.2 billion USD",
+                    "numImpacted":"12",
+                    "isNonSTEM":"0",
+                    "contactInfo": "kaeden.wile@outlook.com"
+
+                }
+            };
+            var additionalParams = {
+                headers: {},
+                queryParams: {}
+            };
+            apigClient.questionsPost(params, body, additionalParams)
+                    .then(function(result){
+                        alert(JSON.stringify(result))
+                    }).catch( function(result){
+                        alert(JSON.stringify(result));
+            });
+        }
+    </script>
+</head>
+<body>
+<form onsubmit="callerino(); return false;">
+    <input id="name"/>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

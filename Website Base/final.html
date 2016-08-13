@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 2</title>
+    <script type="text/javascript" src="validation.js"></script>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    checkIfHas("notes");
+
+    var formResultsData = JSON.parse(sessionStorage.getItem("formResultsData"));
+    var eventType = sessionStorage.getItem("eventType");
+    var eventNotes = sessionStorage.getItem("eventNotes");
+    var formResultsDeeper = JSON.parse(sessionStorage.getItem("formResultsDeeper"));
+    var eventOthers = JSON.parse(sessionStorage.getItem("eventOthers"));
+
+    var apigClient = apigClientFactory.newClient();
+    var params = {};
+    var body = {
+        "data" : formResultsData,
+        "type": eventType,
+        "deeper": formResultsDeeper,
+        "notes": eventNotes,
+        others: eventOthers
+    };
+    alert(JSON.stringify(body));
+    var additionalParams = {
+        headers: {},
+        queryParams: {}
+    };
+    apigClient.questionsPost(params, body, additionalParams)
+            .then(function(result){
+                document.writeln("Executed Successfully")
+            }).catch( function(result){
+        document.writeln("<h1>Error:</h1>"+JSON.stringify(result));
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skunk Works Outreach</title>
+    <link rel="stylesheet" type="text/css" href="formStyle.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="validation.js" type="text/javascript"></script>
+    <script>
+        var myForm = [
+            {name: "owner", type: "textS", maxLength: 50},
+            {name: "numSkunks", type: "NumInt", maxLength: 3, min: 0, wholeNumber: true},
+            {name: "numMentors", type: "NumInt", maxLength: 3, min: 1, wholeNumber: true},
+            {name: "hours", type: "NumFloat", maxLength: 3, min: 0},
+            {name: "date", type: "date" }
+        ];
+    </script>
+</head>
+<body>
+<h1>Skunk Works Outreach</h1>
+<h3>Here are some basic questions about the event</h3>
+<form onsubmit="return formIsValid();" action="javascript:sendResults('eventType.html', 'formResultsData');">
+    <table align="center">
+        <tr id="owner_row">
+            <td class="labelWrapper"><label for="owner">Your Name:</label></td>
+            <td><input type="text" id="owner" name="owner" size="20" maxlength="50"></td>
+        </tr>
+        <tr id="numSkunks_row">
+            <td class="labelWrapper"><label for="numSkunks"># of Students:</label></td>
+            <td><input type="number" id="numSkunks" name="numSkunks" size=20 maxlength="3" min="1"></td>
+        </tr>
+        <tr id="numMentors_row">
+            <td class="labelWrapper"><label for="numMentors"># of Mentors:</label></td>
+            <td><input type="number" id="numMentors" name="numMentors" size="20" maxlength="3" min="0"></td>
+        </tr>
+        <tr id="hours_row">
+            <td class="labelWrapper"><label for="hours">Hours at Event:</label></td>
+            <td><input type="text" id="hours" name="hours" size="20" maxlength="3"></td>
+        </tr>
+        <tr id="date_row">
+            <td class="labelWrapper"><label for="date">Date of Event:</label></td>
+            <td><input type="date" id="date" name="date"></td>
+        </tr>
+    </table>
+    <div class="submitButtonWrapper">
+        <button class="submitButton" type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>
