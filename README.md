@@ -21,7 +21,7 @@ Their free tier will be enough to cover all of your costs for the first year.
   * Multi-AZ Deployment: NO
   * Allocated Storage: Anything less than 20gb
   * Remember your DB identifer, master username, and password
-5. For Advanced Settings, leave everything default and remember what you put for your Database Name
+5. For Advanced Settings, leave everything default, except set a Database name. Make sure you remember this name.
 
 ### Create Lambda Function
 ##### Build your own copy of Lambda Code from the folder Lambda Code
