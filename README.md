@@ -12,15 +12,16 @@ Their free tier will be enough to cover all of your costs for the first year.
 4. _[Optional] Connect free DNS from GitHub student pack_ // TODO this gets complicated
 
 ### Create Database
-1. Select __Launch DB Instance__, and choose *MySQL* as your database.
-2. When asked if you plan to use the database for production purposes, select *MySQL* under Dev/Test (so it's free).
-3. Configure your database under the free usage teir. Some important points:
+1. Return to the home screen and select *RDS*
+2. Under the Instances tab Select __Launch DB Instance__, and choose *MySQL* as your database.
+3. When asked if you plan to use the database for production purposes, select *MySQL* under Dev/Test (so it's free).
+4. Configure your database under the free usage teir. Some important points:
   * DB Engine Version: 5.6.27
   * DB Instance Class: db.t2.micro
   * Multi-AZ Deployment: NO
   * Allocated Storage: Anything less than 20gb
   * Remember your DB identifer, master username, and password
-4. For Advanced Settings, leave everything default and remember what you put for your Database Name
+5. For Advanced Settings, leave everything default and remember what you put for your Database Name
 
 ### Create Lambda Function
 ##### Build your own copy of Lambda Code from the folder Lambda Code
