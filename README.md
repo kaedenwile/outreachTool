@@ -11,6 +11,15 @@ Their free tier will be enough to cover all of your costs for the first year.
 3. Open the bucket and select *Upload* from the __Actions__ button. Then, upload everything from the __Web Base__ folder in GitHub. **Only change images and CSS, not any html or javascript!**
 4. _[Optional] Connect free DNS from GitHub student pack_ // TODO this gets complicated
 
+// Name  Type  Value  Evaluate Target Health   Health Check ID   TTL  Region  Weight  Geolocation  Set ID
+skunkworksdata.me.  A  ALIAS s3-website-us-west-2.amazonaws.com. (z3bj6k6riion7m)  No
+skunkworksdata.me.  NS  ns-925.awsdns-51.net.               172800
+                        ns-1460.awsdns-54.org. 
+                        ns-155.awsdns-19.com. 
+                        ns-1955.awsdns-52.co.uk.
+skunkworksdata.me.  SOA ns-925.awsdns-51.net. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400 900
+www.skunkworksdata.me. A ALIAS s3-website-us-west-2.amazonaws.com. (z3bj6k6riion7m)  No
+
 ### Create Database
 1. Return to the home screen and select *RDS*
 2. Under the Instances tab Select __Launch DB Instance__, and choose *MySQL* as your database.
